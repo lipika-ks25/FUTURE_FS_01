@@ -1,17 +1,33 @@
+
 body {
-  background-color: #fceff9;
+  background-color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
+  color: #2c3e50;
   text-align: center;
-  padding: 50px;
+  margin: 0;
+  padding: 60px 20px;
 }
 
 h1 {
-  color: #ff69b4;
-  font-size: 3em;
-  margin-bottom: 10px;
+  color: #1a237e;
+  font-size: 2.8em;
+  margin-bottom: 15px;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #34495e;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }
