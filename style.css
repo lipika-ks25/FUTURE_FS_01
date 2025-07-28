@@ -119,3 +119,11 @@ footer a {
 .about-text {
   flex: 1;
 }
+#about img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
