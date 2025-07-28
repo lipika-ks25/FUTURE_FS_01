@@ -1,32 +1,110 @@
+/* General Layout */
 body {
   background-color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   color: #2c3e50;
-  text-align: center;
   margin: 0;
-  padding: 60px 20px;
-}
-
-h1 {
-  color: #1a237e;
-  font-size: 2.8em;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1.1em;
+  padding: 40px 20px;
   line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #34495e;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2.2em;
-  }
+/* Header section */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-  p {
-    font-size: 1em;
+header h1 {
+  font-size: 2.5rem;
+  color: #1a237e;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #37474f;
+}
+header, footer {
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+  opacity: 0;
+  animation-delay: 0.1s;
+}
+
+
+/* Section layout */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #1e88e5;
+  border-bottom: 2px solid #90caf9;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #f1f1f1;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: #607d8b;
+}
+a {
+  color: #1e88e5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+button {
+  background-color: #1e88e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+/* Apply to all sections */
+section {
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation-play-state: running;
+}
+
+/* Delay individual sections slightly */
+#about { animation-delay: 0.3s; }
+#skills { animation-delay: 0.5s; }
+#projects { animation-delay: 0.7s; }
+#resume { animation-delay: 0.9s; }
