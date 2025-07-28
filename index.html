@@ -4,8 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lipika's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+<nav style="text-align: center; margin-bottom: 20px;">
+  <a href="#about">About</a> |
+  <a href="#projects">Projects</a> |
+  <a href="#skills">Skills</a> |
+  <a href="#resume">Resume</a>
+</nav>
+
 <body>
   <header>
     <h1>Hello, I'm Lipika 👩🏻‍💻</h1>
@@ -13,27 +21,37 @@
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
+  <h2>About Me</h2>
+
+  <div class="about-container">
+    <img src="assets/profile-temp.jpg" alt="My Photo" />
     
-    <img src="assets/profile-temp.jpg" alt="My Photo" style="width: 150px; border-radius: 50%; margin-bottom: 10px;">
-    <h3>Lipika Subhash K</h3>
-
-
-    <p>I’m an engineering student passionate about frontend development and UI design. 
-      <br>Currently building my skills in HTML, CSS, JavaScript, and React.</p>
-  </section>
+    <div class="about-text">
+      <h3>Lipika Subhash K</h3>
+      <p>
+        I’m an engineering student passionate about frontend development and UI design. <br>
+        Currently building my skills in HTML, CSS, JavaScript, and React.
+      </p>
+    </div>
+  </div>
+</section>
 
   <section id="skills">
     <section id="projects">
   <h2>Projects</h2>
 
-  <div>
-    <h3>🎨 HTML & CSS Practice Page</h3>
-    <p>Simple responsive webpage built using HTML5 and CSS3.</p>
-    <a href="https://lipika-ks25.github.io/FUTURE_FS_01/" target="_blank">View Live</a> |
-    <a href="https://github.com/lipika-ks25/FUTURE_FS_01" target="_blank">View Code</a>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>🎨 HTML & CSS Practice Page</h3>
+      <p>Simple responsive webpage built using HTML5 and CSS3.</p>
+      <a href="https://lipika-ks25.github.io/FUTURE_FS_01/" target="_blank">🔗 View Live</a> |
+      <a href="https://github.com/lipika-ks25/FUTURE_FS_01" target="_blank">💻 View Code</a>
+    </div>
+
+    <!-- You can add more project-card divs here later -->
   </div>
 </section>
+
 
     <h2>Skills</h2>
     <ul>
