@@ -4,53 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lipika's Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
-<nav style="text-align: center; margin-bottom: 20px;">
-  <a href="#about">About</a> |
-  <a href="#projects">Projects</a> |
-  <a href="#skills">Skills</a> |
-  <a href="#resume">Resume</a>
-</nav>
-
 <body>
-  <header>
-    <h1>Hello, I'm Lipika 👩🏻‍💻</h1>
-    <p>Full Stack Web Development Intern @ Future Interns</p>
-  </header>
+  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+  </nav>
 
-  <section id="about">
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="name">Lipika Subhash K</span></h1>
+      <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+      <a href="#about" class="btn">Explore More ↓</a>
+    </div>
+  </section>
+
+
+  <section id="about" data-aos="fade-up">
   <h2>About Me</h2>
 
   <div class="about-container">
     <img src="assets/profile-temp.jpg" alt="My Photo" />
     
     <div class="about-text">
-      <h3>Lipika Subhash K</h3>
+     
       <p>
-        I’m an engineering student passionate about frontend development and UI design. <br>
-        Currently building my skills in HTML, CSS, JavaScript, and React.
+  I'm an engineering student passionate about frontend development and UI design.<br>
+  Currently building my skills in HTML, CSS, JavaScript, and React. <br><br>
+  When I'm not coding, you'll find me either playing table tennis 🏓, vibing to music 🎧, or planning my next side project 💡.
       </p>
+</p>
+
     </div>
   </div>
 </section>
 
   <section id="skills">
-    <section id="projects">
+    <section id="projects" data-aos="zoom-in">
   <h2>Projects</h2>
 
-  <div class="projects-container">
-    <div class="project-card">
-      <h3>🎨 HTML & CSS Practice Page</h3>
-      <p>Simple responsive webpage built using HTML5 and CSS3.</p>
-      <a href="https://lipika-ks25.github.io/FUTURE_FS_01/" target="_blank">🔗 View Live</a> |
-      <a href="https://github.com/lipika-ks25/FUTURE_FS_01" target="_blank">💻 View Code</a>
+  <div class="projects-grid">
+  <div class="project-card">
+    <h3>🎨 HTML & CSS Practice Page</h3>
+    <p>A responsive webpage built using HTML5 and CSS3 as part of Future Interns Task 1.</p>
+    <p><strong>Tech Stack:</strong> HTML, CSS</p>
+    <div class="project-links">
+      <a href="https://lipika-ks25.github.io/FUTURE_FS_01/" target="_blank">🔗 Live</a>
+      <a href="https://github.com/lipika-ks25/FUTURE_FS_01" target="_blank">💻 Code</a>
     </div>
-
-    <!-- You can add more project-card divs here later -->
   </div>
-</section>
+  <div class="project-card">
+  <h3>🩸 Blood Group Detection</h3>
+  <p>Used image processing techniques to detect human blood groups from sample images. Built as part of a college project using OpenCV.</p>
+  <p><strong>Tech Stack:</strong> Python, OpenCV, NumPy</p>
+  <p><em>Code not publicly available</em></p>
+</div>
+
+
+<div class="project-card">
+  <h3>🔐 Cyber Sentinel</h3>
+  <p>A Python-based tool that monitors file changes and alerts users via email.</p>
+  <p><strong>Tech Stack:</strong> Python, File I/O, smtplib, GUI (Tkinter)</p>
+  <a href="https://github.com/lipika-ks25/cyber-sentinel" target="_blank">💻 View Code</a>
+</div>
+  <!-- Add more project cards here -->
+</div>
+
 
 
     <h2>Skills</h2>
@@ -59,6 +87,8 @@
       <li>CSS3</li>
       <li>JavaScript</li>
       <li>React (Learning)</li>
+      <li>Python</li>
+      <li>SQL</li>
     </ul>
   </section>
   <section id="resume">
@@ -69,8 +99,71 @@
   </a>
 </section>
   <footer>
-    <p>📧 Reach me at: <a href="mailto:lipikaks25@gmail.com">lipikaks25@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/lipika-subhash-k-a2016229a" target="_blank">LinkedIn</a></p>
-  </footer>
+  <div class="footer-content">
+    <div class="footer-icons">
+      <a href="mailto:lipikaks25@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/lipika-ks25" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/lipika-subhash-k-a2016229a" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    
+  </div>
+</footer>
+
+  <script>
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Web Developer", "Python Programmer", "MERN Stack Learner"];
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 100);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 50);
+  } else {
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, 1000);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(type, 500);
+});
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
+<script>
+  // Show/hide button on scroll
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
